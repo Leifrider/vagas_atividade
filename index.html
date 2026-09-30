@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortaleza Estágios — O Portal Oficial de Vagas de Estágio na Capital</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fortaleza: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            650: '#0369a1',
+                            700: '#0369a1',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+
+    <!-- Navbar Corporativa -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
+                    <i class="fa-solid fa-graduation-cap text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-slate-900 block leading-none">Fortaleza<span class="text-sky-600">Estágios</span></span>
+                    <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-400 mt-0.5 block">Portal Oficial de Vagas • CE</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#vagas" class="hover:text-sky-600 transition">Vagas Disponíveis</a>
+                <a href="#cadastro" class="hover:text-sky-600 transition">Divulgar Vaga</a>
+                <a href="#como-funciona" class="hover:text-sky-600 transition">Para Estudantes</a>
+            </nav>
+            <div>
+                <a href="#cadastro" class="inline-flex items-center px-4.5 py-2.5 rounded-xl bg-sky-600 text-white font-semibold text-sm shadow-md shadow-sky-600/20 hover:bg-sky-500 transition">
+                    <i class="fa-solid fa-plus mr-2"></i> Publicar Vaga Grátis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white py-24">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6">
+                    <i class="fa-solid fa-location-dot text-sky-400"></i> Exclusivo para Fortaleza e Região Metropolitana
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+                    Conectando talentos a <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">oportunidades em Fortaleza</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-10 leading-relaxed">
+                    Encontre as melhores vagas de estágio nas principais empresas da capital cearense — da Aldeota ao Centro, do Meireles à Parangaba.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#vagas" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-sky-600 text-white font-semibold text-sm shadow-lg shadow-sky-600/30 hover:bg-sky-500 transition text-center">
+                        <i class="fa-solid fa-search mr-2"></i> Ver Vagas em Fortaleza
+                    </a>
+                    <a href="#cadastro" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition text-center">
+                        <i class="fa-solid fa-briefcase mr-2 text-sky-400"></i> Sou Empresa / Recrutador
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto bg-slate-800/80 backdrop-blur-md p-6 rounded-2xl border border-slate-700 shadow-xl">
+                <div class="text-center p-2">
+                    <div class="text-2xl sm:text-3xl font-black text-sky-400" id="stat-total">12+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Vagas na Capital</div>
+                </div>
+                <div class="text-center p-2 border-l border-slate-700">
+                    <div class="text-2xl sm:text-3xl font-black text-emerald-400">R$ 100%</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Bolsas Verificadas</div>
+                </div>
+                <div class="text-center p-2 border-l border-slate-700">
+                    <div class="text-2xl sm:text-3xl font-black text-white">Vários Bairros</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Aldeota, Centro, etc.</div>
+                </div>
+                <div class="text-center p-2 border-l border-slate-700">
+                    <div class="text-2xl sm:text-3xl font-black text-sky-300">Direto</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-medium">Sem Intermediários</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vagas Listing Section -->
+    <section id="vagas" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <span class="text-sky-600 font-semibold text-xs uppercase tracking-wider block mb-1">Mural de Oportunidades</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Vagas de Estágio em Fortaleza</h2>
+                    <p class="text-slate-500 text-sm mt-1">Busque por cargo, empresa ou filtre pelo seu bairro de preferência.</p>
+                </div>
+                <!-- Search & Filters -->
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div class="relative flex-1 sm:w-72">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cargo, empresa, bairro..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition shadow-sm">
+                    </div>
+                    <select id="bairroFilter" class="bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition shadow-sm">
+                        <option value="">Todos os Bairros</option>
+                        <option value="Aldeota">Aldeota</option>
+                        <option value="Centro">Centro</option>
+                        <option value="Meireles">Meireles</option>
+                        <option value="Parangaba">Parangaba</option>
+                        <option value="Papicu">Papicu</option>
+                        <option value="Cocó">Cocó</option>
+                        <option value="Dionísio Torres">Dionísio Torres</option>
+                        <option value="Benfica">Benfica</option>
+                        <option value="Outros">Outros / Região Metropolitana</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de Vagas -->
+            <div id="grid-vagas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Preenchido via JS -->
+            </div>
+
+            <!-- Estado Vazio -->
+            <div id="empty-state" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200 mt-4 shadow-sm">
+                <div class="w-14 h-14 bg-sky-50 rounded-xl flex items-center justify-center mx-auto text-sky-600 text-xl mb-3 border border-sky-100">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">Nenhuma vaga encontrada</h3>
+                <p class="text-slate-500 text-xs mt-1">Tente ajustar os termos de pesquisa ou cadastre uma nova vaga para Fortaleza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Cadastro Section -->
+    <section id="cadastro" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-2">
+                    <i class="fa-solid fa-bullhorn mr-1.5"></i> Divulgação Gratuita
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Cadastrar Nova Vaga em Fortaleza</h2>
+                <p class="text-slate-500 text-sm mt-1">Preencha os dados abaixo para publicar sua vaga instantaneamente no portal.</p>
+            </div>
+
+            <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-lg">
+                <form id="formVaga" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Título -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Título da Vaga *</label>
+                            <input type="text" id="titulo" required placeholder="Ex: Estágio em Desenvolvimento Web" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                        </div>
+                        <!-- Empresa -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Empresa *</label>
+                            <input type="text" id="empresa" required placeholder="Ex: CearáTech Soluções" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                        <!-- Bairro -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Bairro (Fortaleza) *</label>
+                            <select id="bairro" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                                <option value="Aldeota">Aldeota</option>
+                                <option value="Centro">Centro</option>
+                                <option value="Meireles">Meireles</option>
+                                <option value="Parangaba">Parangaba</option>
+                                <option value="Papicu">Papicu</option>
+                                <option value="Cocó">Cocó</option>
+                                <option value="Dionísio Torres">Dionísio Torres</option>
+                                <option value="Benfica">Benfica</option>
+                                <option value="Outros / Metropolitana">Outros / Metropolitana</option>
+                            </select>
+                        </div>
+                        <!-- Modalidade -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Modalidade *</label>
+                            <select id="modalidade" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                                <option value="Presencial">Presencial</option>
+                                <option value="Híbrido">Híbrido</option>
+                                <option value="Remoto">Remoto</option>
+                            </select>
+                        </div>
+                        <!-- Bolsa Auxílio -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Bolsa-auxílio (R$) *</label>
+                            <input type="text" id="bolsa" required placeholder="Ex: R$ 1.200,00" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- Link ou E-mail -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Link de Inscrição ou E-mail RH *</label>
+                        <input type="text" id="link" required placeholder="Ex: https://empresa.com.br/vagas ou rh@cearatech.com" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm">
+                    </div>
+
+                    <!-- Descrição -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Descrição e Requisitos da Vaga *</label>
+                        <textarea id="descricao" rows="4" required placeholder="Descreva as atividades diárias, conhecimentos desejados e requisitos para os estudantes..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition shadow-sm"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="pt-2">
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm shadow-lg shadow-sky-600/25 transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Publicar Vaga em Fortaleza Agora</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i>
+                </div>
+                <span class="text-white font-bold tracking-tight">Fortaleza<span class="text-sky-400">Estágios</span></span>
+            </div>
+            <p class="text-center md:text-left text-xs">
+                &copy; 2026 Fortaleza Estágios. Iniciativa dedicada a fomentar o mercado de talentos na capital cearense.
+            </p>
+            <div class="flex space-x-4 text-base">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Vagas iniciais mockadas estritamente em Fortaleza - CE
+        const vagasIniciais = [
+            {
+                id: 1,
+                titulo: "Estágio em Desenvolvimento Front-end",
+                empresa: "Nordeste Digital Soluções",
+                bairro: "Aldeota",
+                modalidade: "Híbrido",
+                bolsa: "R$ 1.500,00",
+                link: "https://exemplo.com/vaga-frontend",
+                descricao: "Buscamos estudante de Ciência da Computação, Engenharia ou afins para atuar com HTML, Tailwind CSS e React na Aldeota.",
+                data: "Hoje"
+            },
+            {
+                id: 2,
+                titulo: "Estágio em Suporte Técnico de TI",
+                empresa: "Inova Ceará Sistemas",
+                bairro: "Centro",
+                modalidade: "Presencial",
+                bolsa: "R$ 1.100,00",
+                link: "https://exemplo.com/vaga-suporte",
+                descricao: "Atendimento a chamados, suporte a hardware/software e redes para escritório corporativo localizado no Centro de Fortaleza.",
+                data: "Ontem"
+            },
+            {
+                id: 3,
+                titulo: "Estágio em Auxiliar Administrativo",
+                empresa: "Parangaba Comércio & Logística",
+                bairro: "Parangaba",
+                modalidade: "Presencial",
+                bolsa: "R$ 1.000,00",
+                link: "https://exemplo.com/vaga-adm",
+                descricao: "Auxílio em planilhas Excel, emissão de relatórios e atendimento telefônico próximo ao terminal da Parangaba.",
+                data: "Há 2 dias"
+            },
+            {
+                id: 4,
+                titulo: "Estágio em Atendimento e Vendas B2B",
+                empresa: "BeiraMar Tech Hub",
+                bairro: "Meireles",
+                modalidade: "Híbrido",
+                bolsa: "R$ 1.300,00 + Comissão",
+                link: "https://exemplo.com/vaga-vendas",
+                descricao: "Prospecção ativa de clientes corporativos e suporte comercial com vista para a orla do Meireles.",
+                data: "Há 3 dias"
+            }
+        ];
+
+        let vagas = JSON.parse(localStorage.getItem('fortaleza_estagios_vagas')) || vagasIniciais;
+
+        const gridVagas = document.getElementById('grid-vagas');
+        const emptyState = document.getElementById('empty-state');
+        const searchInput = document.getElementById('searchInput');
+        const bairroFilter = document.getElementById('bairroFilter');
+        const formVaga = document.getElementById('formVaga');
+        const statTotal = document.getElementById('stat-total');
+
+        function salvarVagas() {
+            localStorage.setItem('fortaleza_estagios_vagas', JSON.stringify(vagas));
+        }
+
+        function renderizarVagas(lista) {
+            gridVagas.innerHTML = '';
+            
+            if (lista.length === 0) {
+                emptyState.classList.remove('hidden');
+                statTotal.textContent = '0';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            statTotal.textContent = lista.length + '+';
+
+            lista.forEach(vaga => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-slate-200/80 hover:border-sky-300 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group";
+
+                let badgeColor = "bg-sky-50 text-sky-700 border-sky-200";
+                if (vaga.modalidade === "Presencial") badgeColor = "bg-amber-50 text-amber-700 border-amber-200";
+                if (vaga.modalidade === "Remoto") badgeColor = "bg-purple-50 text-purple-700 border-purple-200";
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-3">
+                            <span class="px-3 py-1 rounded-full text-[11px] font-semibold border ${badgeColor}">
+                                <i class="fa-solid fa-circle text-[5px] mr-1.5 align-middle"></i>${vaga.modalidade}
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">${vaga.data || 'Recente'}</span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 group-hover:text-sky-600 transition mb-1 leading-snug">${vaga.titulo}</h3>
+                        <p class="text-xs font-semibold text-sky-700 mb-3 flex items-center">
+                            <i class="fa-solid fa-building text-slate-400 mr-1.5 text-xs"></i>${vaga.empresa}
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-4 pb-3 border-b border-slate-100">
+                            <span class="flex items-center font-medium text-slate-700"><i class="fa-solid fa-location-dot mr-1.5 text-sky-500"></i>${vaga.bairro}, Fortaleza - CE</span>
+                            <span class="font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200"><i class="fa-solid fa-wallet mr-1 text-[10px]"></i>${vaga.bolsa}</span>
+                        </div>
+                        <p class="text-xs text-slate-600 line-clamp-3 mb-6 leading-relaxed">${vaga.descricao}</p>
+                    </div>
+                    <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Fortaleza - CE</span>
+                        <a href="${vaga.link.startsWith('http') || vaga.link.startsWith('mailto') ? vaga.link : 'https://' + vaga.link}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center space-x-1.5">
+                            <span>Candidatar-se</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                gridVagas.appendChild(card);
+            });
+        }
+
+        function filtrarVagas() {
+            const termo = searchInput.value.toLowerCase();
+            const bairroVal = bairroFilter.value;
+
+            const filtradas = vagas.filter(vaga => {
+                const matchTexto = vaga.titulo.toLowerCase().includes(termo) || 
+                                   vaga.empresa.toLowerCase().includes(termo) || 
+                                   vaga.bairro.toLowerCase().includes(termo) ||
+                                   vaga.descricao.toLowerCase().includes(termo);
+                
+                const matchBairro = bairroVal === "" || vaga.bairro === bairroVal;
+
+                return matchTexto && matchBairro;
+            });
+
+            renderizarVagas(filtradas);
+        }
+
+        searchInput.addEventListener('input', filtrarVagas);
+        bairroFilter.addEventListener('change', filtrarVagas);
+
+        formVaga.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const novaVaga = {
+                id: Date.now(),
+                titulo: document.getElementById('titulo').value,
+                empresa: document.getElementById('empresa').value,
+                bairro: document.getElementById('bairro').value,
+                modalidade: document.getElementById('modalidade').value,
+                bolsa: document.getElementById('bolsa').value,
+                link: document.getElementById('link').value,
+                descricao: document.getElementById('descricao').value,
+                data: "Hoje"
+            };
+
+            vagas.unshift(novaVaga);
+            salvarVagas();
+            filtrarVagas();
+            formVaga.reset();
+
+            // Rolar suavemente de volta para o mural de vagas
+            document.getElementById('vagas').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderizarVagas(vagas);
+        });
+    </script>
+</body>
+</html>
